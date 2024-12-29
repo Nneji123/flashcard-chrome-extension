@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Enhanced Flashcard Generator",
+    "version": "1.0",
+    "description": "Generate and manage flashcards with remote storage and beautiful UI",
+    "permissions": ["storage", "contextMenus", "activeTab"],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "service_worker": "background.ts"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.ts"]
+      }
+    ]
+  }
+  
+  
